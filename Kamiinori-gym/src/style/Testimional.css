@@ -1,0 +1,48 @@
+:root {
+  --Primary: white;
+  --Secondary: #11212d;
+  --Text: black;
+  --backdrop-filter: blur(12px);
+  --webkit-backdrop-filter: blur(12px);
+  --border: 1px solid rgba(255, 255, 255, 0.2);
+  --box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+.testimonial {
+  backdrop-filter: var(--backdrop-filter);
+  -webkit-backdrop-filter: var(--webkit-backdrop-filter);
+  box-shadow: var(--box-shadow);
+  height: 90vh;
+  display: flex;
+}
+.testimonial-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.testimonial-card {
+  background-color: whitesmoke;
+  padding: 10px;
+}
+.testimonial-line {
+  height: 300px;
+}
+.testimonial-quote {
+  font-size: 1.5rem;
+  text-align: left;
+  font-weight: bolder;
+}
+.quote-icon {
+  font-size: 3rem;
+}
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.author-info img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+
+  border-radius: 100%;
+}

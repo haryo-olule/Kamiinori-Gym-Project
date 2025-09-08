@@ -1,0 +1,140 @@
+/* FAQ Section Styles */
+.faq-section {
+  height: auto;
+  min-height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.faq-content {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.faq-header {
+  padding-right: 40px;
+}
+
+.QUESTION-Quote {
+  font-size: 1.5rem;
+  text-align: justify;
+  font-weight: bolder;
+  line-height: 4rem;
+}
+
+.more-faqs-link {
+  display: inline-block; 
+  color: #11212d;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 10px; 
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.more-faqs-link:hover {
+  background: #11212d;
+  color: white;
+}
+
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background: white;
+  border-radius: 12px;
+  border: 1px solid black;
+  transition: all 0.3s ease;
+  padding: 10px;
+}
+
+/* Hover state - only when closed */
+.faq-item:hover:not([open]) {
+  background-color: #11212d;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Open state - always white background */
+.faq-item[open] {
+  background-color: white;
+}
+
+.faq-question {
+  padding: 24px 28px;
+  font-size: 20px;
+  font-weight: bolder;
+  color: black;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.faq-question::-webkit-details-marker {
+  display: none;
+}
+
+.faq-question::after {
+  content: "+";
+  font-size: 30px;
+  font-weight: bolder;
+  color: black;
+  transition: transform 0.3s ease, color 0.3s ease;
+  line-height: 1;
+}
+
+/* Hover state for question - only when closed */
+.faq-item:hover:not([open]) .faq-question {
+  color: white;
+}
+
+.faq-item:hover:not([open]) .faq-question::after {
+  color: white;
+}
+
+/* Open state for question - always black text */
+.faq-item[open] .faq-question {
+  color: black;
+}
+
+.faq-item[open] .faq-question::after {
+  transform: rotate(45deg);
+  color: black;
+}
+
+.faq-answer {
+  padding: 28px ;
+  animation: slideDown 0.3s ease-out;
+
+
+}
+
+.faq-answer p {
+  color: black;
+  line-height: 2;
+  margin: 0;
+  font-size: 18px;
+  font-weight: bolder;
+  text-align: justify;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

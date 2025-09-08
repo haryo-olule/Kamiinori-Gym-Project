@@ -1,0 +1,130 @@
+:root {
+  --Primary: white;
+  --Secondary: #11212d;
+  --Text: black;
+  --backdrop-filter: blur(12px);
+  --webkit-backdrop-filter: blur(12px);
+  --border: 1px solid rgba(255, 255, 255, 0.2);
+  --box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+section {
+  padding: 1% 8%;
+  position: relative;
+}
+
+
+.hero {
+  backdrop-filter: var(--backdrop-filter);
+  -webkit-backdrop-filter: var(--webkit-backdrop-filter);
+  border: var(--border);
+  border-radius: 20px;
+  margin: 20px 0;
+  box-shadow: var(--box-shadow);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #11212d, transparent);
+}
+
+.slide-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.hero-slide {
+  flex: 0 0 100%;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 40px;
+  min-height: 500px;
+
+}
+
+.hero-col {
+  flex: 1;
+}
+
+.hero-col:nth-child(2) {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: bolder;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: var(--Text);
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: var(--Text);
+  margin-bottom: 30px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.8;
+  text-align: justify;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-image {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.hero-button {
+  padding: 15px 30px;
+  border-radius: 20px;
+  border: var(--border);
+  background-color: var(--Secondary);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--Primary);
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-button:hover {
+  color: var(--Text);
+  background: var(--Primary);
+  transform: translateY(-2px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 8px 25px rgba(0, 0, 0, 0.15);
+}
+.overlay {
+  background-color: var(--Secondary);
+  width: 100%;
+  padding: 10px;
+  font-size: 1.9rem;
+  margin-top: 30px;
+  color: var(--Primary);
+  text-align: center;
+}
+.overlay span {
+  color: wheat;
+}
